@@ -23,17 +23,17 @@ phases:
   #install:
     #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
     #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
-    #runtime-versions:
+    runtime-versions:
+      python: 3.8
       # name: version
-      # name: version
-    #commands:
-      # - command
-      # - command
-  pre_build:
     commands:
       - pip install --upgrade pip
-      - pip install python~=3.8
-      - pip install django~=4.0
+      - pip install django==4.0
+  #pre_build:
+    #commands:
+      #- 
+      #- pip install python~=3.8
+      #- 
   build:
     commands:
       - python manage.py test core
