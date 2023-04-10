@@ -32,8 +32,8 @@ phases:
   pre_build:
     commands:
       - pip install --upgrade pip
-      - pip install python==3.8
-      - pip install django==4.0
+      - pip install python~=3.8
+      - pip install django~=4.0
   build:
     commands:
       - python manage.py test core
